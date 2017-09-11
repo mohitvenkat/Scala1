@@ -1,0 +1,6 @@
+val tupleList = List((1, "alpha"), (2, "beta"), (3, "gamma"), (4, "zeta"), (5, "omega"))
+
+scala> var matchList = tupleList.filter(x => x._2.contains('m') ||x._2.contains('z'))
+res18: List[(Int, String)] = List((3,gamma), (4,zeta), (5,omega))
+var sum = matchList.map(_._1).sum
+var avg =  sum /matchList.size
